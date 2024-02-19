@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+  
+html {
+    font-size: 16px;
+}
+  
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: url(https://staticg.sportskeeda.com/editor/2023/06/76556-16873869599828-1920.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#img-div img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    border: 10px solid white;
+    border-radius: 20px;
+    width: 50%;
+}
+
+#title, #img-caption {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
+}
+
+.tribute-info {
+    display: block;
+    background: rgb(64, 78, 87);
+    border-top: 10px solid #00e3eb;
+    border-bottom: 10px solid #00e3eb;
+    border-radius: 10px;
+    max-width: 70%;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.bold {
+    font-weight: 800;
+}
+
+.tribute-info p {
+    width: 95%;
+    color: rgb(210, 234, 255);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 5);
+}
+
+.tribute-info h2, .link {
+    margin: 10px 20px;
+    color: rgb(210, 234, 255);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 5);
+}
+
+.link a {
+    text-decoration: none;
+    color: aqua;
+}
+
+.italic {
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
+    display: block;
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 5);
+}
