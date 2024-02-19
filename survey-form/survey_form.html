@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact Survey Form</title>
+    <link rel="stylesheet" href="survey_form.css">
+</head>
+<body>
+    <h1 id="title">Genshin Impact Survey Form</h1>
+    <p id="description">Dear Travelers, Tell Paimon your Genshin Impact's gaming experience. <br>We will look at the survey results carefully, and make adjustments to these main aspects</p>
+    <form id="survey-form" method="POST">
+        <fieldset>
+            <label for="name" id="name-label">Enter Name: <input type="text" name="name" id="name" placeholder="Enter your name" required></label>
+            <label for="email" id="email-label">Enter Email: <input type="email" name="email" id="email" placeholder="Enter your Email" required></label>
+            <label for="number" id="number-label">Enter Age: <input type="number" name="number" id="number" pattern="[0-9]+" max="120" min="13" placeholder="Enter your age (optional)"></label>
+        </fieldset>
+        <fieldset class="inline">
+            <label>Select server (required)</label>
+            <label for="radio-asia"><input id="radio-asia" type="radio" name="server" value="asia" checked /> Asia</label>
+            <label for="radio-america"><input id="radio-america" type="radio" value="america" name="server"/> America</label>
+            <label for="radio-europe"><input id="radio-europe" type="radio" value="europe" name="server"/> Europe</label>
+            <label for="radio-twhkmo"><input id="radio-twhkmo" type="radio" value="twhkmo" name="server"/> TW, HK, MO</label>
+        </fieldset>
+        <fieldset>
+            <label for="dropdown">Which region exploration you enjoyed the most?
+                <select name="dropdown" id="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">mondstadt</option>
+                    <option value="2">Liyue</option>
+                    <option value="3">Inazuma</option>
+                    <option value="4">Sumeru</option>
+                    <option value="5">Fontaine</option>
+                    <option value="6">Natlan</option>
+                    <option value="7">Snezhnaya</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="dropdown">How long have you been playing Genshin?
+                <select name="dropdown" id="dropdown">
+                    <option value="">(select one)</option>
+                    <option value="1">Less than 1 year</option>
+                    <option value="2">Between 1 and 2 years</option>
+                    <option value="3">More than 2 years</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset class="inline">
+            <Label>What game content would you like to improve?<br>
+                <input type="checkbox" id="rewards" value="rewards">More rewards.<br>
+                <input type="checkbox" id="enemies" value="enemies">Adjust the enemies' difficulties.<br>
+                <input type="checkbox" id="map" value="map">Improve map exploration; eg: bountiful aesthetic places.<br>
+                <input type="checkbox" id="puzzles" value="puzzles">More puzzles.<br>
+                <input type="checkbox" id="story" value="story">Story writing.<br>
+            </Label>
+        </fieldset>
+        <fieldset class="inline">
+            <Label>What other games you played besides Genshin Impact?<br>
+                <input type="checkbox" id="hsr" value="hsr" >Honkai: Star Rail<br>
+                <input type="checkbox" id="hi3" value="hi3" >Honkai Impact 3rd<br>
+                <input type="checkbox" id="pjsekai" value="pjsekai" >HATSUNE MIKU: COLORFUL STAGE<br>
+                <input type="checkbox" id="reverse-1999" value="reverse-1999" >Reverse: 1999<br>
+                <input type="checkbox" id="arknights" value="arknights" >Arknights<br>
+            </Label>
+        </fieldset>
+        <fieldset>
+            <label for="experience">Share your experience to us!
+                <textarea id="experience" name="experience" rows="3" cols="30" placeholder="I am an F2P yet I enjoyed..."></textarea>
+            </label>
+            <label for="suggestion">Elaborate the other aspects of why Genshin has something to improve. (leave if no suggestion)
+                <textarea id="suggestion" name="suggestion" rows="3" cols="30" placeholder="Genshin has flaws that I'm not practically satisfied such as..."></textarea>
+            </label>
+        </fieldset>
+        <button id="submit">Submit</button>
+    </form>
+</body>
+</html>
