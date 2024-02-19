@@ -1,0 +1,162 @@
+body {
+    background: rgb(13, 3, 24);
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar {
+    position: fixed;
+    display: inline;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    padding-bottom: 2em;
+    background: rgb(13, 3, 24);
+    border-left: 2px solid rgb(0, 0, 0);
+    z-index: 999;
+}
+
+#navbar a {
+    position: relative;
+    left: -30px;
+    display: block;
+    color: rgb(243, 227, 255);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(243, 227, 255);
+}
+
+#navbar header {
+    position: relative;
+    font-weight: bold;
+    color: rgb(243, 227, 255);
+    font-size: 1.5em;
+    left: 35px;
+    
+}
+
+#navbar ul {
+    list-style-type: none;
+}
+
+#main-doc {
+    width: 80%;
+    height: 100%;
+    padding-bottom: 2em;
+    background: transparent;
+    border-left: 2px solid rgb(0, 0, 0);
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+    #main-doc {
+        width: 100%;
+    }
+    #navbar {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+li::marker {
+    color: rgb(243, 227, 255);
+}
+
+#main-doc header{
+    position: relative;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 50px 10px;
+    color: rgb(243, 227, 255);
+}
+
+#main-doc p{
+    position: relative;
+    color: rgb(243, 227, 255);
+    margin: 10px 10px;
+}
+
+.item {
+    border: 1px solid rgb(0, 0, 0); /* Border for grid items */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(55, 0, 117);
+
+}
+
+.bold {
+    font-weight: bold;
+}
+
+figcaption {
+    color: rgb(243, 227, 255);
+}
+
+.keqing-artifact img,
+.keqing-weapon img {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+}
+
+.keqing-artifact ul, 
+.keqing-weapon ul {
+    list-style-type: none;
+} 
+
+.keqing-build {
+    display: grid;
+    width: 400px;
+    grid-template-columns: 100px 300px; /* Three columns, each 100px wide */
+    grid-template-rows: repeat(5, 80px); /* Two rows, each 100px tall */
+}
+
+.keqing-build img {
+    width: 30px;
+    height: 30px;
+}
+
+.keqing-talent {
+    display: grid;
+    grid-template-columns: 100px 200px; /* Three columns, each 100px wide */
+    grid-template-rows: repeat(4, 80px); /* Two rows, each 100px tall */
+}
+
+.keqing-artifact {
+    display: grid;
+    grid-template-columns: 100px 350px 300px; /* Three columns, each 100px wide */
+    grid-template-rows: 60px 280px 280px 120px; /* Two rows, each 100px tall */
+}
+
+.keqing-weapon {
+    display: grid;
+    grid-template-columns: 100px 350px 300px; /* Three columns, each 100px wide */
+    grid-template-rows: 60px 320px 160px 200px; /* Two rows, each 100px tall */
+}
+
+.keqing-team {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px; /* Three columns, each 100px wide */
+    grid-template-rows: 60px 150px 150px;
+}
+
+.keqing-team img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+ 
+
+
+
+
+
+  
