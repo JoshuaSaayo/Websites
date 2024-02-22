@@ -1,0 +1,793 @@
+:root {
+    --font-color: white;
+    --header-color1: rgb(47, 0, 100);
+    --header-color2: rgb(100, 0, 100);
+    --border-color: rgb(11, 0, 20);
+    --raiden-palette1: rgb(143, 73, 255);
+    --raiden-palette2: rgb(111, 22, 255);
+    --raiden-palette3: rgb(69, 0, 180);
+    --raiden-palette4: rgb(189, 148, 255);
+    --background-pallette1: rgb(255, 85, 255);
+    --background-pallette2: rgb(209, 203, 241);
+    --background-pallette3: pink;
+    --background-pallette4: rgb(210, 30, 255);
+    --background-pallette5: rgb(211, 145, 156);
+    --background-pallette6: rgb(244, 231, 255);
+    --skin-color: bisque;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: linear-gradient(90deg, var(--header-color1), var(--header-color2)) ;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 999;
+    border-bottom: 2px solid var(--border-color);
+}
+
+#navbar a {
+    position: relative;
+    font-size: 1.5em;
+    color: var(--font-color);
+    font-weight: bold;
+    margin-left: 100px;
+    right: 250px;
+}
+
+#navbar a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--font-color);
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+#navbar a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+#welcome-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: rgb(252, 222, 255);
+}
+
+#text {
+    top: 200px;
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 500px;
+}
+
+#text h1 {
+    color: var(--font-color);
+    font-size: 3em;
+    text-shadow: 
+    -1px -1px 0 var(--raiden-palette3),  
+    1px -1px 0 var(--raiden-palette3),
+    -1px 1px 0 var(--raiden-palette3),
+    1px 1px 0 var(--raiden-palette3);
+}
+
+#text p {
+    font-size: 1.5em;
+    color: var(--raiden-palette2);
+}
+
+.raiden-shogun * {
+    position: absolute;
+}
+
+.raiden-shogun {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 120px auto;
+    z-index: 1;
+    left: 0;
+    bottom: 460px;
+}
+
+.face {
+    width: 65%;
+    height: 45%;
+    background-color: var(--skin-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.eye {
+    width: 20%;
+    height: 23%;
+    background-color: var(--raiden-palette1);
+    top: 40%;
+    border-radius: 50% 50% 30% 30%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.eye.left {
+    left: 20%;
+}
+  
+.eye.right {
+    right: 20%;
+}
+
+.eye-lid {
+    width: 45%;
+    height: 50%;
+    background-color: white;
+    top: 25%;
+    left: 5%;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+.eye-lid-bot {
+    width: 100%;
+    height: 50%;
+    background-color: var(--raiden-palette4);
+    border-radius: 50% 50% 0% 0%;
+    bottom: 0;
+    z-index: 3;
+}
+
+.blush {
+    width: 15%;
+    height: 10%;
+    background-color: var(--background-pallette3);
+    top: 65%;
+    border-radius: 50%;
+    z-index: 1;
+}
+  
+.blush.left {
+    left: 15%;
+}
+  
+.blush.right {
+    right: 15%;
+}
+
+.bangs {
+    background-color: var(--raiden-palette2);
+    z-index: 5;
+}
+
+
+.bangs.left {
+    height: 60%;
+    width: 20%;
+    left: 0;
+    border-radius: 50% 0% 70% 0%;
+}
+
+.bangs.right {
+    height: 40%;
+    width: 80%;
+    right: 0;
+    border-radius: 0% 50% 0% 50%;
+}
+
+.bangs.tip-left{
+    top: 40px;
+    height: 100%;
+    width: 8%;
+    background-color: var(--raiden-palette2);
+    border-radius: 0% 0% 0% 90%;
+}
+
+.bangs.tip-right{
+    top: 20px;
+    height: 100%;
+    width: 8%;
+    right: 3px;
+    background-color: var(--raiden-palette2);
+    border-radius: 0% 0% 90% 0%;
+}
+
+.accessory.object1 {
+    height: 28%;
+    width: 15%;
+    background-color: var(--raiden-palette3);
+    border-radius: 10% 80% 80% 10%;
+    left: -28px;
+    top: -20px;
+    transform: rotate(30deg);
+    z-index: 6;
+}
+
+.accessory.object2{
+    height: 40%;
+    width: 8%;
+    background-color: rgb(255, 200, 47);
+    transform: rotate(20deg);
+    top: -30px;
+    border-radius: 0% 0% 80% 0%;
+    z-index: 6;
+}
+
+.accessory.object3{
+    height: 30%;
+    width: 8%;
+    background-color: rgb(255, 200, 47);
+    transform: rotate(60deg);
+    border-radius: 0% 0% 80% 0%;
+    z-index: 6;
+}
+
+.accessory.flower1 {
+    height: 20%;
+    width: 15%;
+    background-color: var(--raiden-palette1);
+    border-radius: 50%;
+    z-index: 7;
+    left: -20px;
+}
+.flower-lid {
+    height: 50%;
+    width: 50%;
+    background-color: rgb(234, 215, 255);
+    border-radius: 50%;
+    top: 25%;
+    left: 25%;
+}
+
+.hair {
+    height: 90%;
+    width: 70%;
+    border-radius: 40% 40% 30% 30%;
+    background: linear-gradient(var(--raiden-palette2) 20%, var(--raiden-palette3));
+    z-index: -1;
+    top: -40px;
+    right: 98px;
+}
+
+.body {
+    width: 40%;
+    height: 40%;
+    background-color: var(--skin-color);
+    top: 140px;
+    left: 40px;
+    border-radius: 80% 80% 30% 30%;
+    z-index: 1;
+}
+
+.clothes {
+    width: 50%;
+    height: 100%;
+    background-color: var(--raiden-palette4);
+}
+
+.clothes.right {
+    right: 0;
+    border-radius: 30% 20% 0% 0%;
+}
+
+.clothes.left {
+    border-radius: 20% 30% 0% 0%;
+}
+
+.hip {
+    height: 30%;
+    width: 100%;
+    background: linear-gradient(
+        var(--raiden-palette3) 0%, var(--raiden-palette3) 33.33%, /* First stripe */
+        rgb(255, 47, 47) 33.33%, rgb(255, 47, 47) 66.66%, /* Second stripe */
+        var(--raiden-palette3) 66.66%, var(--raiden-palette3) 100%); /* Third stripe */
+    z-index: 2;
+    top: 60px;
+}
+
+.thigh {
+    background: linear-gradient(
+        -180deg, 
+        var(--skin-color) 0%, var(--skin-color) 20%, /* First stripe */
+        rgb(44, 44, 44) 20%, rgb(44, 44, 44) 70%, /* Second stripe */
+        var(--raiden-palette3) 70%, var(--raiden-palette3) 100%); /* Third stripe */
+    height: 30%;
+    width: 40%;
+    top: 120px;
+    left: 35px;
+    border-radius: 0% 0% 20% 20%;
+}
+
+.arm {
+    background: var(--raiden-palette4);
+    height: 80%;
+    width: 30%;
+    bottom: 30px;
+    z-index: -1;
+}
+
+.arm.left {
+    left: -25px;
+    transform: rotate(45deg);
+    border-radius: 20% 0% 30% 0%;
+}
+
+.arm.right {
+    right: -25px;
+    transform: rotate(-45deg);
+    border-radius: 0% 20% 0% 30%;
+}
+
+.sword {
+    height: 10%;
+    width: 100%;
+    background: var(--raiden-palette1);
+    top: 80px;
+    right: 160px;
+    border-radius: 0% 0% 30% 100%;
+    transform: rotate(-20deg);
+    z-index: -2;
+}
+
+.sparks{
+    height: 150px;
+    width: 150px;
+    top: 180px;
+    right: 260px;
+    animation: 3s linear infinite spark;
+    z-index: -1;
+}
+
+.spark1 {
+    width: 0;
+    height: 0;
+    top: 5px;
+    left: 15px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 46.6px solid var(--background-pallette6);
+    transform: rotate(60deg);
+}
+
+.spark2 {
+    width: 15px;
+    height: 40px;
+    top: 32px;
+    left: 14px;
+    background: var(--background-pallette6);
+    transform: rotate(150deg);
+}
+
+.spark3 {
+    width: 0;
+    height: 0;
+    top: 54px;
+    left: 8px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 46.6px solid var(--background-pallette6);
+    transform: rotate(-125deg);
+}
+
+@keyframes spark {
+    20% {
+        left: -50px;
+    }
+    40% {
+        left: -50px;
+    }
+}
+
+.mountain.left {
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(
+        var(--background-pallette2), 
+        var(--background-pallette1));
+    position: absolute;
+    transform: skew(0deg, 44deg);
+    top: 560px;
+    left: 0;
+    z-index: 1;
+}
+  
+.mountain.back {
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(
+        var(--background-pallette2), 
+        var(--background-pallette1));
+    position: absolute;
+    transform: rotate(45deg);
+    left: 180px;
+    top: 575px;
+    z-index: 1;
+}
+
+.foreground {
+    width: 100vw;
+    height: 20%;
+    background-color: var(--header-color2);
+    position: absolute;
+    top: 850px;
+    z-index: 3;
+}
+
+.sakura-trees * {
+    position: absolute;
+}
+
+.sakura-trees {
+    position: relative;
+    height: 600px;
+    width: 600px;
+}
+
+.sakura.trunk {
+    height: 50%;
+    width: 50px;
+    background-color: burlywood;
+    top: 550px;
+    right: -800px;
+    z-index: 2;
+}
+
+.sakura.bush {
+    height: 70%;
+    width: 90%;
+    background: linear-gradient(45deg, var(--background-pallette3), rgb(255, 233, 237));
+    border-radius: 30% 30% 50% 50%;
+    top: 250px;
+    right: -1050px;
+    z-index: 2;
+}
+
+.sakura.trunk.left {
+    height: 50%;
+    width: 30px;
+    background-color: burlywood;
+    top: 550px;
+    right: -1080px;
+    z-index: 1;
+}
+
+.sakura.bush.left {
+    height: 50%;
+    width: 60%;
+    background: var(--background-pallette3);
+    border-radius: 50%;
+    top: 450px;
+    right: -1230px;
+    z-index: 1;
+}
+
+.sakura.trunk.right {
+    height: 50%;
+    width: 30px;
+    background-color: burlywood;
+    top: 550px;
+    right: -680px;
+    z-index: 1;
+}
+
+.sakura.bush.right {
+    height: 40%;
+    width: 55%;
+    background: var(--background-pallette3);
+    border-radius: 50%;
+    top: 500px;
+    right: -850px;
+    z-index: 1;
+}
+
+.petals * {
+    position: absolute;
+}
+
+.petals {
+    position: relative;
+    height: 300px;
+    width: 300px;
+}
+
+.petal {
+    background-color: var(--background-pallette3);
+    border-radius: 50%;
+}
+
+.petal1 {
+    height: 30px;
+    width: 20px;
+    left: 1500px;
+}
+
+.petal2 {
+    height: 55px;
+    width: 35px;
+    left: 1370px;
+    transform: rotate(30deg);
+}
+
+.petal3 {
+    height: 30px;
+    width: 20px;
+    top: 30px;
+    left: 1300px;
+    transform: rotate(-30deg);
+}
+
+.petal4 {
+    height: 20px;
+    width: 15px;
+    top: 50px;
+    left: 1430px;
+    transform: rotate(-30deg);
+}
+
+.petal5 {
+    height: 30px;
+    width: 20px;
+    top: 50px;
+    left: 1530px;
+}
+
+.petal6 {
+    height: 55px;
+    width: 35px;
+    top: -70px;
+    left: 1280px;
+    transform: rotate(30deg);
+}
+
+.petal7 {
+    height: 30px;
+    width: 20px;
+    top: -90px;
+    left: 1390px;
+    transform: rotate(-30deg);
+}
+
+.petal8 {
+    height: 20px;
+    width: 15px;
+    top: -80px;
+    left: 1550px;
+    transform: rotate(-30deg);
+}
+
+
+
+#projects {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    border-bottom: 2px solid var(--border-color);
+    background: var(--header-color2);
+    z-index: 3;
+}
+
+#projects h2 {
+    position: relative;
+    font-size: 3em;
+    padding-top: 100px;
+    color: var(--font-color);
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 150px;
+    text-shadow: 
+    -2px -2px 0 var(--header-color1),  
+    2px -2px 0 var(--header-color1),
+    -2px 2px 0 var(--header-color1),
+    2px 2px 0 var(--header-color1);
+}
+
+.project-tile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
+    grid-gap: 4rem;
+    margin: 0;
+}
+
+.project-tile img {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0 ;
+    margin: 0;
+    transition: height .3s;
+    
+}
+
+.project-title {
+    position: relative;
+    font-size: 1.5em;
+    color: var(--font-color);
+    background: var(--border-color);
+    border-radius:  0 0 10px 10px;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1;
+}
+
+#profile-link {
+    height: 30px;
+    width: 250px;
+    margin-left: 43%;
+    margin-top: 200px;
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+#projects button {
+    position: relative;
+    font-size: 1.5em;
+    background: transparent;
+    color: var(--font-color);
+    border: 1px solid var(--font-color);
+    border-radius: 5px;
+    transition: .3s;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#projects button:hover {
+    background: var(--font-color);
+    color: rgb(38, 27, 53);
+}
+
+
+
+#contact {
+    position: relative;
+    background: rgb(27, 0, 61);
+    height: 100vh;
+    width: 100%;
+    border-bottom: 2px solid var(--border-color);
+    z-index: 3;
+}
+
+#contact h2 {
+    font-size: 3em;
+    position: relative;
+    color: var(--font-color);
+    font-family: 'Raleway', sans-serif;
+}
+
+#contact p {
+    font-size: 1.5em;
+    position: relative;
+    color: var(--background-pallette3);
+    margin: 40px auto;
+}
+
+.contact-mountain.left{
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(
+        rgb(0, 4, 56), 
+        rgb(43, 0, 99));
+    position: absolute;
+    transform: skew(0deg, 44deg);
+    top: 660px;
+    left: 0;
+    z-index: 1;
+}
+
+.contact-mountain.back {
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(
+        rgb(0, 4, 56), 
+        rgb(43, 0, 99));
+    position: absolute;
+    transform: rotate(45deg);
+    left: 180px;
+    top: 675px;
+    z-index: 1;
+}
+
+.moon {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(255, 255, 144);
+    border-radius: 50%;
+    right: 30px;
+    top: 30px;
+}
+
+.moon-carve {
+    height: 80%;
+    width: 80%;
+    background-color: rgb(27, 0, 61);
+    border-radius: 50%;
+}
+
+.links {
+    position: absolute;
+    display: flex;
+    top: 350px;
+    left: 400px;
+}
+
+.links a{
+    position: relative;
+    margin-left: 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--font-color);
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.links a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+footer {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: flex-end;
+    font-size: 1.5em;
+    padding: 10px 30px;
+    color: var(--font-color);
+    background: linear-gradient(90deg, var(--header-color1), var(--header-color2));
+    z-index: 4;
+}
+
+footer a {
+    color: var(--font-color);
+}
+
+footer a:hover {
+    color: rgb(168, 93, 255);
+}
