@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(171, 183, 255);
+    height: 100vh;
+}
+
+.wrapper {
+    background-color: blueviolet;
+    width: 500px;
+    height: 80%;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+h1 {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    color: rgb(255, 255, 255);
+}
+
+.number {
+    font-size: 1.2em;
+    display: block;
+    margin: 30px auto;
+}
+
+.convert-btn {
+    font-size: 1.2em;
+    background: rgb(255, 0, 140);
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 40%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.convert-btn:hover {
+    color: rgb(255, 0, 140);
+    background: white;
+}
+
+.output {
+    height: 5%;
+    width: 50%;
+    margin: 20px auto;
+    position: relative;
+    font-size: 1.2em;
+    color: white;
+}
