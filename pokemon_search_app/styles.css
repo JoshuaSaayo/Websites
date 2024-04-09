@@ -1,0 +1,362 @@
+/* CSS reset */
+:root {
+  --text-color: rgb(89, 89, 255);
+  --background: skyblue;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+}
+
+/* Project styling */
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: var(--text-color);
+  font-size: 1.7em;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  width: 325px;
+  margin: 25px 0;
+  background-color: #f5f6f7;
+  border: 5px solid var(--text-color);
+  border-radius: 15px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -350px;
+  width: 550px;
+  height: 550px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, 
+  rgb(252, 138, 138) 0%, 
+  rgb(252, 138, 138) 50%, 
+  rgb(110, 110, 110) 25%, 
+  rgb(110, 110, 110) 52%, 
+  rgb(255, 240, 240) 50%, 
+  rgb(255, 240, 240) 100%);
+  z-index: -1;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  top: 220px;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgb(255, 240, 240);
+  border: 10px solid rgb(110, 110, 110);
+  z-index: -1;
+}
+
+.output,
+#search-form {
+  display: flex;
+  justify-content: center;
+}
+
+#search-form {
+  flex-wrap: wrap;
+  margin: 10px 0;
+  padding: 5px;
+  border-radius: 8px 8px 0 0;
+  gap: 10px;
+}
+
+label {
+  align-self: center;
+  top: 5px;
+}
+
+.search-input:focus-visible,
+.search-button:focus-visible {
+  outline: 3px solid var(--background);
+}
+
+.search-input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: var(--text-color);
+  padding: 0 35px 0 5px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.search-button {
+  padding: 14px 0;
+  width: 80px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: white;
+  color: var(--text-color);
+  cursor: pointer;
+  border: 1px solid var(--text-color);
+  transition: .2s;
+}
+
+.search-button:hover {
+  color: white;
+  background-color: var(--text-color);
+}
+
+.output {
+  margin: 10px 0;
+  padding: 5px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-container,
+.bottom-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 325px;
+}
+
+.top-container {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f1f7;
+}
+
+.name-and-id {
+  height: 28px;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.size {
+  height: 22px;
+  font-size: 0.85rem;
+}
+
+.sprite-container {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sprite {
+  width: 180px;
+}
+
+#types {
+  min-height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+.type {
+  width: 66px;
+  padding: 5px;
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: red;
+  text-transform: uppercase;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  font-size: 1 rem;
+  color: #f5f6f7;
+  background-color: var(--background);
+}
+
+th:nth-child(even),
+td:nth-child(even) {
+  border-left: 5px solid #f5f6f7;
+}
+
+tr {
+  border-bottom: 5px solid #f5f6f7;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 8px;
+}
+
+/*.pokeball {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(45, 0, 71);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.top-ball {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background-color: rgb(252, 138, 138);
+}
+
+.bottom-ball {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  top: 50%;
+  background-color: rgb(255, 240, 240);
+}
+
+.center-ball {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  border-radius: 50%;
+  top: 40%;
+  left: 40%;
+  background-color: rgb(255, 240, 240);
+  border: 5px solid rgb(110, 110, 110);
+  z-index: 1;
+}
+
+.line-ball {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(110, 110, 110);
+  top: 50%;
+}*/
+
+/* Special styling for Pokémon types */
+
+.normal {
+background-color: #b7b7aa;
+}
+
+.fire {
+background-color: #ff6f52;
+}
+
+.water {
+background-color: #42a1ff;
+}
+
+.electric {
+background-color: #fecc33;
+}
+
+.grass {
+background-color: #78cc55;
+}
+
+.ice {
+background-color: #66ccfe;
+}
+
+.fighting {
+background-color: #d3887e;
+}
+
+.poison {
+background-color: #c68bb7;
+}
+
+.ground {
+background-color: #dfba52;
+}
+
+.flying {
+background-color: #8899ff;
+}
+
+.psychic {
+background-color: #ff66a3;
+}
+
+.bug {
+background-color: #aabb23;
+}
+
+.rock {
+background-color: #baaa66;
+}
+
+.ghost {
+background-color: #9995d0;
+}
+
+.dragon {
+background-color: #9e93f1;
+}
+
+.dark {
+background-color: #b59682;
+}
+
+.steel {
+background-color: #abaabb;
+}
+
+.fairy {
+background-color: #ed99ed;
+}
+
+@media screen and (min-width: 550px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .container {
+    width: 450px;
+  }
+
+  #search-form,
+  .top-container,
+  .bottom-container {
+    width: 95%;
+  }
+
+  .type {
+    width: 75px;
+  }
+}
