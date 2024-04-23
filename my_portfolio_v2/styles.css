@@ -395,7 +395,8 @@ ul {
 .tel-no-validator,
 .service-section,
 .pokemon-search,
-.empty-sekai {
+.empty-sekai,
+.data-and-ml-engineering {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -429,6 +430,10 @@ ul {
 
 .empty-sekai {
     animation-delay: 2.5s;
+}
+
+.data-and-ml-engineering {
+    animation-delay: 2.8s;
 }
 /*
 .tel-no-validator::before {
